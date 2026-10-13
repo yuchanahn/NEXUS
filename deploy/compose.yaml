@@ -1,0 +1,187 @@
+name: nexus
+services:
+  core-image:
+    image: nexus-core:local
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+      target: core
+    profiles: ["setup"]
+    entrypoint: ["nexus-admin"]
+    command: ["--help"]
+
+  initialize:
+    image: nexus-core:local
+    profiles: ["setup"]
+    entrypoint: ["nexus-admin"]
+    command: ["init", "/config", "nexus"]
+    volumes:
+      - ./state:/config
+
+  worker-image:
+    image: nexus-worker:rust
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+      target: worker
+    profiles: ["setup"]
+    entrypoint: ["sleep"]
+    command: ["infinity"]
+
+  seed-main:
+    image: nexus-core:local
+    profiles: ["setup"]
+    entrypoint: ["nexus-admin"]
+    command: ["seed", "/config/client-main.config", "/extensions"]
+    volumes:
+      - ./state:/config:ro
+      - extensions_main:/extensions
+
+  seed-peer:
+    image: nexus-core:local
+    profiles: ["setup"]
+    entrypoint: ["nexus-admin"]
+    command: ["seed", "/config/client-peer.config", "/extensions"]
+    volumes:
+      - ./state:/config:ro
+      - extensions_peer:/extensions
+
+  provider:
+    image: nexus-provider:local
+    build:
+      context: ../projects/llm-provider
+      dockerfile: Dockerfile
+      target: runtime
+    env_file:
+      - path: ./state/provider.env
+        required: true
+    environment:
+      PROVIDER_CONFIG: /config/provider.json
+      PROVIDER_BIND: 0.0.0.0:8080
+    volumes:
+      - ./state:/config:ro
+    ports:
+      - "127.0.0.1:${PROVIDER_PORT:-18080}:8080"
+    networks: [nexus]
+    init: true
+    read_only: true
+    tmpfs: [/tmp:size=16m]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 512m
+    cpus: 1.0
+    restart: unless-stopped
+
+  soak-observer:
+    image: nexus-core:local
+    entrypoint: ["nexus-soak"]
+    command: ["/config/soak.json"]
+    volumes:
+      - ./state/soak.json:/config/soak.json:ro
+      - soak_state:/data
+    networks: [nexus]
+    depends_on: [provider, collab-main, collab-peer, core-main, core-peer]
+    init: true
+    read_only: true
+    tmpfs: [/tmp:size=16m]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+
+  collab-main:
+    image: nexus-core:local
+    command: ["--config", "/config/collab-main.json"]
+    entrypoint: ["nexus-collaboration"]
+    volumes:
+      - ./state:/config:ro
+      - collab_main:/data
+    networks: [nexus]
+    init: true
+    read_only: true
+    tmpfs: [/tmp:size=16m]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+
+  collab-peer:
+    image: nexus-core:local
+    command: ["--config", "/config/collab-peer.json"]
+    entrypoint: ["nexus-collaboration"]
+    volumes:
+      - ./state:/config:ro
+      - collab_peer:/data
+    networks: [nexus]
+    init: true
+    read_only: true
+    tmpfs: [/tmp:size=16m]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+
+  core-main:
+    image: nexus-core:local
+    command: ["serve", "/config/core-main.json"]
+    volumes:
+      - ./state:/config:ro
+      - core_main:/data
+      - extensions_main:/extensions
+      - work_shared:/workspace/work
+      - projects_shared:/workspace/projects
+      - labs_shared:/workspace/labs
+      - /var/run/docker.sock:/var/run/docker.sock
+    group_add:
+      - "${DOCKER_GID:-0}"
+    ports:
+      - "127.0.0.1:${MAIN_PORT:-18190}:8090"
+    networks: [nexus, workers]
+    depends_on: [provider, collab-main, collab-peer]
+    init: true
+    restart: unless-stopped
+
+  core-peer:
+    image: nexus-core:local
+    command: ["serve", "/config/core-peer.json"]
+    volumes:
+      - ./state:/config:ro
+      - core_peer:/data
+      - extensions_peer:/extensions
+      - work_shared:/workspace/work
+      - projects_shared:/workspace/projects
+      - labs_shared:/workspace/labs
+      - /var/run/docker.sock:/var/run/docker.sock
+    group_add:
+      - "${DOCKER_GID:-0}"
+    ports:
+      - "127.0.0.1:${PEER_PORT:-18191}:8090"
+    networks: [nexus, workers]
+    depends_on: [provider, collab-main, collab-peer]
+    init: true
+    restart: unless-stopped
+
+networks:
+  nexus:
+    name: nexus
+  workers:
+    name: nexus-workers
+
+volumes:
+  core_main:
+    name: nexus-core-main
+  core_peer:
+    name: nexus-core-peer
+  collab_main:
+    name: nexus-collab-main
+  collab_peer:
+    name: nexus-collab-peer
+  extensions_main:
+    name: nexus-work-nexus-main-extensions
+  extensions_peer:
+    name: nexus-work-nexus-peer-extensions
+  work_shared:
+    name: nexus-work-nexus-shared
+  projects_shared:
+    name: nexus-work-nexus-projects
+  labs_shared:
+    name: nexus-work-nexus-labs
+  soak_state:
+    name: nexus-soak-state

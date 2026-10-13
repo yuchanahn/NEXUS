@@ -1,0 +1,9 @@
+# Explicit deterministic fixture; never enabled by the production compose file.
+services:
+  fixture:
+    image: nexus-runtime:rust
+    entrypoint: nexus-fixture
+    networks: [workers]
+    restart: 'no'
+  provider:
+    depends_on: [fixture]

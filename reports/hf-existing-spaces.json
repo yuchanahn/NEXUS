@@ -1,0 +1,79 @@
+{
+  "checked_utc": "2026-10-13T12:11:21.0275686Z",
+  "spaces": [
+    {
+      "id": "yuchanahn2/go-emo",
+      "sdk": "docker",
+      "private": true,
+      "stage": "RUNNING",
+      "hardware": "cpu-basic",
+      "requested": "cpu-basic",
+      "last_modified": "2025-08-06T18:32:47+09:00"
+    },
+    {
+      "id": "yuchanahn2/grok-image-pool",
+      "sdk": "docker",
+      "private": true,
+      "stage": "SLEEPING",
+      "hardware": null,
+      "requested": "cpu-basic",
+      "last_modified": "2026-04-01T14:07:43+09:00"
+    },
+    {
+      "id": "yuchanahn2/grok-image-script-run",
+      "sdk": "docker",
+      "private": true,
+      "stage": "SLEEPING",
+      "hardware": null,
+      "requested": "cpu-basic",
+      "last_modified": "2026-03-18T08:38:32+09:00"
+    },
+    {
+      "id": "yuchanahn2/grok-chat-space",
+      "sdk": "docker",
+      "private": true,
+      "stage": "SLEEPING",
+      "hardware": null,
+      "requested": "cpu-basic",
+      "last_modified": "2026-03-27T19:13:46+09:00"
+    },
+    {
+      "id": "yuchanahn2/grok-imagine-gallery-space",
+      "sdk": "docker",
+      "private": true,
+      "stage": "SLEEPING",
+      "hardware": null,
+      "requested": "cpu-basic",
+      "last_modified": "2026-04-03T21:42:55+09:00"
+    },
+    {
+      "id": "yuchanahn2/grok-image-rs",
+      "sdk": "docker",
+      "private": true,
+      "stage": "SLEEPING",
+      "hardware": null,
+      "requested": "cpu-basic",
+      "last_modified": "2026-04-05T01:28:05+09:00"
+    },
+    {
+      "id": "yuchanahn2/personaxi-agent-hub",
+      "sdk": "docker",
+      "private": true,
+      "stage": "SLEEPING",
+      "hardware": null,
+      "requested": "cpu-basic",
+      "last_modified": "2026-04-14T01:28:18+09:00"
+    },
+    {
+      "id": "yuchanahn2/simtrader-hma-mean-reversion-live",
+      "sdk": "docker",
+      "private": true,
+      "stage": "RUNTIME_ERROR",
+      "hardware": null,
+      "requested": "cpu-basic",
+      "last_modified": "2026-05-12T12:11:27+09:00"
+    }
+  ],
+  "read_only": true,
+  "redeploy_verified": false
+}

@@ -1,0 +1,20 @@
+{
+  "actual_linux_docker": true,
+  "agent_id": "14044e46-9d62-4d64-990e-01841d5cc77a",
+  "checks": [
+    "http_provider_to_agent_tool_roundtrip",
+    "native_structured_tool_calls",
+    "rust_worker_write",
+    "owner_verifier",
+    "named_volume_only_workers",
+    "nonroot_readonly_worker",
+    "agent_sqlite_restart",
+    "collaboration_rust_client",
+    "collaboration_sqlite_restart"
+  ],
+  "fixture_only": true,
+  "implementation": "rust",
+  "passed": true,
+  "physical_remote_server_tested": false,
+  "real_llm_test": false
+}

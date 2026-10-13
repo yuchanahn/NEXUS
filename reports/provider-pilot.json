@@ -1,0 +1,26 @@
+{
+  "unclose": {
+    "full_agent_quality": "pending",
+    "model": "turboderp/Qwen3.8-27B-exl3",
+    "external_nonce_roundtrip": true,
+    "text_smoke": true,
+    "structured_call": "read_nonce"
+  },
+  "nvidia": {
+    "text_nonce": true,
+    "checkpoint_tool": true,
+    "model": "nvidia/nemotron-3-super-120b-a12b",
+    "swarm_rate_limits_observed": true
+  },
+  "antigravity": {
+    "model": "gemini-3.6-flash-high",
+    "current_upstream_status": 404
+  },
+  "checked_utc": "2026-10-13T11:05:42.4273677Z",
+  "opencode": {
+    "followup_provider_errors": true,
+    "model": "big-pickle",
+    "text_ready": true,
+    "initial_agent_calls": true
+  }
+}

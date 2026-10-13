@@ -1,0 +1,20 @@
+services:
+  web:
+    image: nexus-browser:rust
+    build: {context: .., dockerfile: deploy/Dockerfile, target: browser}
+    init: true
+    restart: unless-stopped
+    command: [/config/web.json]
+    shm_size: 512mb
+    networks: [workers]
+    volumes: [./config/web.json:/config/web.json:ro, browser-profile:/profile]
+    ports:
+      - '127.0.0.1:${NEXUS_WEB_OWNER_PORT:-18687}:18187'
+      - '127.0.0.1:${NEXUS_WEB_PUBLIC_PORT:-18688}:18188'
+    healthcheck:
+      test: [CMD, curl, -fsS, http://localhost:18189/health]
+      interval: 15s
+      timeout: 3s
+      retries: 3
+volumes:
+  browser-profile:

@@ -1,0 +1,159 @@
+{
+  "checked_utc": "2026-10-13T11:55:34.3689480Z",
+  "nodes": [
+    {
+      "agents": [
+        {
+          "id": "67f9aef0-18a3-487d-9261-70f3c87e4c4f",
+          "name": "NEXUS Expansion Coordinator",
+          "status": "running",
+          "steps": 189,
+          "errors": 12,
+          "route_id": "primary"
+        },
+        {
+          "id": "7f29c58b-fda2-4d35-8d1f-3484d601de8d",
+          "name": "Provider Discovery",
+          "status": "retrying",
+          "steps": 7,
+          "errors": 41,
+          "route_id": "nvidia"
+        },
+        {
+          "id": "10c8aeef-700f-4770-9c01-fe2fac6c2bcd",
+          "name": "OpenCode Integrator",
+          "status": "stopped",
+          "steps": 1,
+          "errors": 12,
+          "route_id": "opencode"
+        },
+        {
+          "id": "7714265c-6416-4382-8c0d-9605bfc1506b",
+          "name": "Antigravity Evaluator",
+          "status": "running",
+          "steps": 32,
+          "errors": 66,
+          "route_id": "nvidia"
+        },
+        {
+          "id": "d0247bc9-2ed5-402c-a66f-5fba39edae1f",
+          "name": "NVIDIA Evaluator",
+          "status": "retrying",
+          "steps": 3,
+          "errors": 31,
+          "route_id": "nvidia"
+        },
+        {
+          "id": "eeea061c-4f3a-4a14-976e-e80996c34a25",
+          "name": "Anonymous Provider Research",
+          "status": "retrying",
+          "steps": 1,
+          "errors": 20,
+          "route_id": "opencode"
+        },
+        {
+          "id": "7abd7817-0d07-4b4b-80ff-3f2dfb60e9cc",
+          "name": "Agent Evaluation Harness",
+          "status": "retrying",
+          "steps": 3,
+          "errors": 31,
+          "route_id": "nvidia"
+        },
+        {
+          "id": "d47203af-ca62-4f6e-903b-12176289c4a6",
+          "name": "Provider Portability",
+          "status": "retrying",
+          "steps": 1,
+          "errors": 20,
+          "route_id": "opencode"
+        },
+        {
+          "id": "b936df25-d85c-43bd-8e25-8bdcdcaaa3f2",
+          "name": "Unclose Qwen Rust Agent Pilot",
+          "status": "retrying",
+          "steps": 3,
+          "errors": 11,
+          "route_id": "unclose-qwen38-27b-tool-pilot"
+        }
+      ],
+      "node": "local-main",
+      "root_id": "67f9aef0-18a3-487d-9261-70f3c87e4c4f",
+      "active": 8,
+      "default_provider": "nexus-web",
+      "default_model": "chatgpt-web/medium"
+    },
+    {
+      "agents": [
+        {
+          "id": "bbc0e3cf-01eb-437f-af8c-d46d123059ec",
+          "name": "NEXUS Cloud and Scale Coordinator",
+          "status": "running",
+          "steps": 81,
+          "errors": 74,
+          "route_id": "primary"
+        },
+        {
+          "id": "4958949d-5d9c-4abe-b1d9-cfeb7ceddfd6",
+          "name": "Cloud Execution Runtime",
+          "status": "retrying",
+          "steps": 3,
+          "errors": 32,
+          "route_id": "nvidia"
+        },
+        {
+          "id": "77b1b045-9611-402e-b167-97dadac2849c",
+          "name": "External State Integrator",
+          "status": "retrying",
+          "steps": 9,
+          "errors": 37,
+          "route_id": "nvidia"
+        },
+        {
+          "id": "c8e416e4-7149-4cc8-b107-30a5da240e9c",
+          "name": "HF Deployment Research",
+          "status": "retrying",
+          "steps": 1,
+          "errors": 23,
+          "route_id": "opencode"
+        },
+        {
+          "id": "78d77780-2eeb-49f2-a534-71db2035cf09",
+          "name": "Agent Model Quality",
+          "status": "retrying",
+          "steps": 1,
+          "errors": 26,
+          "route_id": "nvidia"
+        },
+        {
+          "id": "939601a4-fdd4-446c-8e41-418ab3e06bfe",
+          "name": "Cross-node Collaboration",
+          "status": "retrying",
+          "steps": 3,
+          "errors": 21,
+          "route_id": "opencode"
+        },
+        {
+          "id": "10752169-be86-4622-b402-a7469f14cba8",
+          "name": "Reliability and Memory",
+          "status": "retrying",
+          "steps": 0,
+          "errors": 20,
+          "route_id": "nvidia"
+        },
+        {
+          "id": "c39ece63-8c17-4244-8b68-408d8c1628ea",
+          "name": "Model Catalogue Research",
+          "status": "retrying",
+          "steps": 1,
+          "errors": 20,
+          "route_id": "opencode"
+        }
+      ],
+      "node": "local-peer",
+      "root_id": "bbc0e3cf-01eb-437f-af8c-d46d123059ec",
+      "active": 8,
+      "default_provider": "nexus-web",
+      "default_model": "chatgpt-web/medium"
+    }
+  ]
+}
