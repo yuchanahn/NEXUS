@@ -35,3 +35,7 @@ Use Rust ratatui + crossterm (or an equivalently capable cross-platform terminal
 - Final RESULT.md and README must describe the implemented interface and exact launch commands honestly. The host will verify real local/cloud connectivity using protected credentials and compare the actual rendered UI with this brief before declaring delivery.
 
 Keep the current working alpha available as a fallback until v2 is verified. New dependencies and UI changes belong in the separate nexus-tui project, not in the protected core. Astra remains forbidden.
+
+Owner follow-up: GUI-like agent-state visualization was requested; the official list-style Agent View interpretation above is not an approved final design. Review Flightdeck card/gauge/swimlane panels, pixtuoid terminal pixel office, and AgentVis workflow graph. Visual preference is pending concrete reference comparison; keep reusable data/API work and federation progressing.
+
+CONFIRMED: the owner selected characters working in an office (pixtuoid / Pixel Agents). terminal-ui-office-brief.md is now the authoritative visual target. No further style clarification is pending.
