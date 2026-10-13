@@ -1,0 +1,16 @@
+[
+  {
+    "from": "hf-grok-image-pool",
+    "to": "hf-grok-image-script-run",
+    "accepted": true,
+    "nonce_match": true,
+    "verification": "owner-client transport only, not model-initiated DM"
+  },
+  {
+    "from": "hf-grok-image-script-run",
+    "to": "hf-grok-image-pool",
+    "accepted": true,
+    "nonce_match": true,
+    "verification": "owner-client transport only, not model-initiated DM"
+  }
+]

@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "space": "yuchanahn2/grok-image-pool",
+      "node": "hf-grok-image-pool",
+      "stage": "RUNNING",
+      "quota_error": null,
+      "revision": "d4f790ab5e7ebb77b64eda27f29f521f0caaf51d",
+      "agents": [
+        {
+          "id": "8035efc5-6b0a-4ead-b4bb-b0fde2992afb",
+          "name": "Cloud researcher hf-grok-image-pool",
+          "status": "running",
+          "steps": 5,
+          "errors": 2
+        }
+      ]
+    },
+    {
+      "space": "yuchanahn2/grok-image-script-run",
+      "node": "hf-grok-image-script-run",
+      "stage": "RUNNING",
+      "quota_error": null,
+      "revision": "bc911f5e362076a499c8cf5b7b97232d4dc91778",
+      "agents": [
+        {
+          "id": "771420ce-e060-4fd4-9a8e-ff02cfbe4ada",
+          "name": "Cloud researcher hf-grok-image-script-run",
+          "status": "running",
+          "steps": 3,
+          "errors": 2
+        }
+      ]
+    },
+    {
+      "space": "yuchanahn2/grok-chat-space",
+      "node": "hf-grok-chat-space",
+      "stage": "PAUSED",
+      "quota_error": "Quota exceeded for flavor cpu-basic (requested=1): current=3, limit=3",
+      "revision": "9f8c2ac5002a5196ec13d455af6108c0444f0499",
+      "agents": []
+    },
+    {
+      "space": "yuchanahn2/grok-imagine-gallery-space",
+      "node": "hf-grok-imagine-gallery-space",
+      "stage": "PAUSED",
+      "quota_error": "Quota exceeded for flavor cpu-basic (requested=1): current=3, limit=3",
+      "revision": "756c10551908c55548387641fcc2eba830509d27",
+      "agents": []
+    },
+    {
+      "space": "yuchanahn2/grok-image-rs",
+      "node": "hf-grok-image-rs",
+      "stage": "PAUSED",
+      "quota_error": "Quota exceeded for flavor cpu-basic (requested=1): current=3, limit=3",
+      "revision": "b5e3be5430aa2b5988d086d40f1bcebccfd2cdf4",
+      "agents": []
+    },
+    {
+      "space": "yuchanahn2/personaxi-agent-hub",
+      "node": "hf-personaxi-agent-hub",
+      "stage": "PAUSED",
+      "quota_error": "Quota exceeded for flavor cpu-basic (requested=1): current=3, limit=3",
+      "revision": "a8180702b37ad8c03c5b5d1b3f2cade088d9da6c",
+      "agents": []
+    },
+    {
+      "space": "yuchanahn2/simtrader-hma-mean-reversion-live",
+      "node": "hf-simtrader-hma-mean-reversion-live",
+      "stage": "PAUSED",
+      "quota_error": "Quota exceeded for flavor cpu-basic (requested=1): current=3, limit=3",
+      "revision": "da24beded194c1b5de8845b376d2e017489a7274",
+      "agents": []
+    }
+  ],
+  "checked_utc": "2026-10-13T12:44:34.4654501Z"
+}
