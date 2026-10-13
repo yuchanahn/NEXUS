@@ -1,0 +1,5 @@
+**/target
+**/.git
+**/private
+**/.env
+**/*.log

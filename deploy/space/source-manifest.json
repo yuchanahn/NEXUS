@@ -1,0 +1,185 @@
+{
+  "source_files": [
+    {
+      "path": "deploy/space/projects/nexus-agent/src/types.rs",
+      "sha256": "b99caf039119331180d29c235beda266535a59aded013b0c355fd3694725318f"
+    },
+    {
+      "path": "deploy/space/projects/nexus-agent/src/tools.rs",
+      "sha256": "776ad644aa8cdf02c47c068c7d5d15b6745caaf3f827cad8711b24a18d40173a"
+    },
+    {
+      "path": "deploy/space/projects/nexus-agent/src/store.rs",
+      "sha256": "0a42edbaca41ab29f034fe1c7b44cacd2efb95b45bab3a905eccbd3729962df2"
+    },
+    {
+      "path": "deploy/space/projects/nexus-agent/src/runtime.rs",
+      "sha256": "efe705ef59a54f938b7439ca8e4a3be3905c33e72ce42775f840d731e7ebfaa2"
+    },
+    {
+      "path": "deploy/space/projects/nexus-agent/src/main.rs",
+      "sha256": "bb64b0fd76167dbc7bc47938301d3cb2ae0c5fa54ded12a7ee79a8540536f9dd"
+    },
+    {
+      "path": "deploy/space/projects/nexus-agent/src/lib.rs",
+      "sha256": "c8c75efa75a14daad3fff75ae96e018343b4183c7417751d75b3f3ed8917ee37"
+    },
+    {
+      "path": "deploy/space/projects/nexus-agent/Cargo.toml",
+      "sha256": "89985d89832cc3c2c922518f607904db68b0d374abb2db48107d18b015f67647"
+    },
+    {
+      "path": "deploy/space/projects/nexus-agent/Cargo.lock",
+      "sha256": "42d87a0ae9d06f8e8567b83ae78c1edca38992b50253181b38afd0908181718c"
+    },
+    {
+      "path": "deploy/space/projects/nexus-agent/src/bin/nexus-admin.rs",
+      "sha256": "2e8d05b708440390e99bb6b8ad610a48ba168047df9032264ac3e224b01d299a"
+    },
+    {
+      "path": "deploy/space/projects/nexus-agent/src/api.rs",
+      "sha256": "fe75587549c6b2c404f67ddf60be5bf95cf71370c8eff33bfe8345b55829258e"
+    },
+    {
+      "path": "deploy/space/projects/nexus-agent/src/bin/nexus-fixture.rs",
+      "sha256": "6cb60e8aea8979098027cf5860f56018b785bde3ee56a38f8a3c82adf5bfcea2"
+    },
+    {
+      "path": "deploy/space/projects/nexus-agent/src/bin/nexus-soak.rs",
+      "sha256": "c9e8c1d0fbd77b37bc6f53ae8a429ddda2028ef358ad91999fcfe026f92276b5"
+    },
+    {
+      "path": "deploy/space/projects/nexus-agent/src/bin/nexus-space.rs",
+      "sha256": "63e5f1f71dbe46f85303a12cd866fd10e54e89b5ebdea11d3d97c61a1bd0f586"
+    },
+    {
+      "path": "deploy/space/projects/nexus-agent/src/bin/nexus-verify.rs",
+      "sha256": "5967c8763c7f58450dc9fee4eddb82cac692611d240c0d3bb66a09be2546b08f"
+    },
+    {
+      "path": "deploy/space/projects/nexus-agent/src/bin/nexus-tool.rs",
+      "sha256": "b7401e35f03e0fef2166ce0870e2556b9fc2c64ea4a16eedfbf64d1976c3cc46"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/provider-server/tests/http_contract.rs",
+      "sha256": "51008bfc8de0d8082e82d91b6fa67b81811a0fa522835ea1d054bcfbc62cb1f1"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/provider-server/src/main.rs",
+      "sha256": "6399cb2edeb4facc187e5c091fa70df554b902031a88cc447570513b2c48433a"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/provider-server/src/lib.rs",
+      "sha256": "23b3ee439b9e79b2336723213e64daeb713d68980c8decd7cfec727177b1fe37"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/provider-server/Cargo.toml",
+      "sha256": "182e680b04d45cdcb1124d5df01021dc3bbaf776a48574018fcb07e72d11e9d3"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/llm-mock/tests/contract.rs",
+      "sha256": "f2b04d069facf82da7817c03904937dda9eb979e870ddfd1a944f91354b77a0d"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/provider-client/src/sse.rs",
+      "sha256": "4d3e539e741fbf8dce37d46f149bb58c9f26065199396bf76ed4d7b03203ac5f"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/provider-client/src/lib.rs",
+      "sha256": "dee5fe1f8d93480f4a8150addbc64d8fdcc70ce45ed095f6de91feee6556f40e"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/llm-mock/src/lib.rs",
+      "sha256": "be0d3056a823117f9a638119fa86e23bff7605255eb0d8b9963d28bb3f3fe8f5"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/llm-mock/examples/basic.rs",
+      "sha256": "d0c8cd213c4e391dca27de6f01e119e94686df1be2485ccee58c06c02f233770"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/llm-mock/Cargo.toml",
+      "sha256": "2434de1f72a67b3d858b3236600aad08c2a32de7513591722b9c1a90e3a7d9ef"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/provider-client/examples/remote.rs",
+      "sha256": "952fe078b7d9de82e30ae224287d4843f82f305f678d891e814882e8b244fbe2"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/provider-client/examples/nexus_tools.rs",
+      "sha256": "3a4f17a01309456b45b7e77a99029f9a244a387c5aea13ff664ebb68518923d0"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/provider-client/Cargo.toml",
+      "sha256": "a67fdda118074316e2f85e79761f423acf2ffa327a9dea4070a751cf343fa0aa"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/llm-contract/src/lib.rs",
+      "sha256": "acdbcd29083899a2344ca9289b2ce656b2254e1a4a952c6dcb0f894b7c657c96"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/llm-contract/Cargo.toml",
+      "sha256": "ed0ddc9521243148340227927ca2aff56f314ed37d427927a5ff6102485ce313"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/llm-wire/src/lib.rs",
+      "sha256": "840e73df78cd24f513375faea51e8bfb7cdac9c75cd5a0d32923a1d1793f2732"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/llm-wire/Cargo.toml",
+      "sha256": "0d96b163cdccb6cd0c3268ef246f104316ed239015d2c8800ad7924827753fa3"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/llm-adapters/tests/docker_endpoint.rs",
+      "sha256": "b484348403750bd29f78938c78c1321a51129042927c72933b16800c76e862bb"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/llm-adapters/tests/adapters.rs",
+      "sha256": "49cdf297ccef8bedfc503e078029176a8097632a542fe168bc59642242189317"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/llm-adapters/src/streaming.rs",
+      "sha256": "70de3ffcca4f367d693b0eb80fb3a7bf78859a5e1da70c12fa1e5ba66d04d470"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/llm-adapters/src/lib.rs",
+      "sha256": "890d0535fb8ec9bf6eee6ed90e8adc41c69a5e07bd9f9b2dc16b05f926ab9510"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/llm-adapters/src/emulated.rs",
+      "sha256": "866c6162db15d1511e56c845b13299592f73c033f77a6394eac83062b8054e02"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/llm-adapters/src/codec.rs",
+      "sha256": "5791b485d8e77abe8708bba36cdf34ed43316e2b616e410ac3cc83bda92fda9c"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/llm-adapters/Cargo.toml",
+      "sha256": "f5cf0204384059200e6f0f769190d5c47a2c36093f665e8d8ddabe9695865a04"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/Cargo.toml",
+      "sha256": "5174907fffd9998f3e43fcbda726c2e925efbfc8226c0734cbbf07b11dbbd3c4"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/Cargo.lock",
+      "sha256": "8197b17cba3bfb0d30c0245c4cbaa2124d4395c14eeedb6c0db04d39c963fe02"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/llm-provider/Cargo.toml",
+      "sha256": "bccd5e21ece8bbfef390622e8cb04403ef84dc6fe555e9c7c8ceccbdf1b35132"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/llm-provider/src/validate.rs",
+      "sha256": "01deb6a90829abc97fed065da7c8b356ab9c8083a2b4c370753b123dddcc6c2b"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/llm-provider/src/lib.rs",
+      "sha256": "c9d37bedfa06697ecec4c9887806eb4806ed0e5048ccea130b5952d4a559e290"
+    },
+    {
+      "path": "deploy/space/projects/llm-provider/crates/llm-provider/src/collect.rs",
+      "sha256": "9ffd2f3c982df6530045a055099ee8766b87b9f945cd72911a11f88064627d73"
+    }
+  ],
+  "created_utc": "2026-10-13T12:31:31.1504132Z"
+}

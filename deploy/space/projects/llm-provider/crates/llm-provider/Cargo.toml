@@ -1,0 +1,12 @@
+[package]
+name = "llm-provider"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+llm-contract.workspace = true
+serde_json.workspace = true
+futures-core.workspace = true
+futures-util.workspace = true

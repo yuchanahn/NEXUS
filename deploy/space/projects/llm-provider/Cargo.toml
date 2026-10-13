@@ -1,0 +1,29 @@
+[workspace]
+members = ["crates/llm-contract", "crates/llm-provider", "crates/llm-mock", "crates/llm-wire", "crates/provider-server", "crates/provider-client", "crates/llm-adapters"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+futures-core = "0.3"
+futures-util = "0.3"
+futures-executor = "0.3"
+llm-contract = { path = "crates/llm-contract" }
+llm-provider = { path = "crates/llm-provider" }
+llm-wire = { path = "crates/llm-wire" }
+llm-mock = { path = "crates/llm-mock" }
+provider-server = { path = "crates/provider-server" }
+provider-client = { path = "crates/provider-client" }
+llm-adapters = { path = "crates/llm-adapters" }
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "net", "time", "sync", "signal"] }
+axum = "0.8"
+reqwest = { version = "0.12", default-features = false, features = ["json", "stream", "rustls-tls"] }
+async-stream = "0.3"
+uuid = { version = "1", features = ["v4"] }
+subtle = "2"

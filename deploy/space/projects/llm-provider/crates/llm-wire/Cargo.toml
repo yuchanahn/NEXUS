@@ -1,0 +1,10 @@
+[package]
+name = "llm-wire"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+llm-contract.workspace = true
+serde.workspace = true

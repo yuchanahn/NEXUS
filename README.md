@@ -1,5 +1,7 @@
 # NEXUS 개발 작업 폴더
 
+HF Docker Space용 자체 완결 Rust 배포 소스는 [deploy/space](deploy/space/README.md)에 포함됩니다. 공개 저장소를 clone한 뒤 `docker build -t nexus-space deploy/space`로 빌드할 수 있습니다. 실행에는 소유자가 별도로 공급하는 노드별 인증·피어 설정·모델 경로·비공개 상태 저장소가 필요합니다. 개발용 `projects/` 저장소는 계속 독립 관리하며 배포 폴더의 소스는 명시적 릴리스 스냅샷입니다.
+
 2026-10-12 최종 도구 검증: 등록된 67개 경로를 모두 시도했고 **42개에서 툴콜·외부 결과 재입력 왕복**을 확인했습니다. 네이티브·명시적 에뮬레이션·웹 MCP와 미가용·출력 실패를 구분한 [모델별 도구 지원표](projects/llm-provider/docs/tool-verification.md)가 현재 기준입니다.
 
 각 구성요소는 `projects/` 아래에서 독립적인 Git 저장소와 빌드 환경으로 관리합니다. 상위 저장소는 하위 프로젝트의 소스나 `.git`을 추적하지 않습니다. 현재 프로젝트는 Rust `projects/llm-provider`, 사용자 브릿지 포크 기반 `projects/nexus-web-harness`, Rust `projects/nexus-agent`입니다.

@@ -1,0 +1,16 @@
+[package]
+name = "llm-mock"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+llm-contract.workspace = true
+llm-provider.workspace = true
+futures-core.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true
+futures-util.workspace = true
+futures-executor.workspace = true

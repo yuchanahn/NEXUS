@@ -1,0 +1,18 @@
+[package]
+name = "provider-client"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+llm-contract.workspace = true
+llm-provider.workspace = true
+llm-wire.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+futures-util.workspace = true
+tokio.workspace = true
+reqwest.workspace = true
+async-stream.workspace = true
+uuid.workspace = true
