@@ -1,0 +1,27 @@
+{
+  "task_id": "federation-v1",
+  "receipts": [
+    {
+      "agent": "67f9aef0-18a3-487d-9261-70f3c87e4c4f",
+      "message": "48ac3100-0a92-44de-9890-8daaa4898a1a",
+      "node": "local-main"
+    },
+    {
+      "agent": "bbc0e3cf-01eb-437f-af8c-d46d123059ec",
+      "message": "4b04dab4-9ad8-46be-8ab7-0e2ea86fa5b5",
+      "node": "local-peer"
+    },
+    {
+      "agent": "8035efc5-6b0a-4ead-b4bb-b0fde2992afb",
+      "message": "970c3d68-6d61-461e-b098-8a7ebed9e933",
+      "node": "hf-grok-image-pool"
+    },
+    {
+      "agent": "771420ce-e060-4fd4-9a8e-ff02cfbe4ada",
+      "message": "b519eacc-b2eb-4353-88a3-b3a4c614b1f6",
+      "node": "hf-grok-image-script-run"
+    }
+  ],
+  "assigned_utc": "2026-10-13T12:57:14.2201135Z",
+  "live_federation_verified": false
+}
