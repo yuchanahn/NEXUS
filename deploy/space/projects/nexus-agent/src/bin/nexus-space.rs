@@ -221,6 +221,11 @@ struct Archive {
 }
 impl Archive {
     async fn restore(&self) -> Result<()> {
+        // A surviving local DB (and its WAL) is newer than the periodic remote snapshot.
+        // Never overwrite it on an ordinary container/process restart.
+        if std::path::Path::new("/data/core/agent.sqlite").exists() {
+            return Ok(());
+        }
         let r = self
             .client
             .get(format!(
@@ -266,11 +271,7 @@ impl Archive {
     }
     async fn persist(&self) -> Result<()> {
         let source = rusqlite::Connection::open("/data/core/agent.sqlite")?;
-        source.backup(
-            "main",
-            "/data/core/snapshot.sqlite",
-            None,
-        )?;
+        source.backup("main", "/data/core/snapshot.sqlite", None)?;
         let status = child(
             "tar",
             &[
@@ -284,6 +285,7 @@ impl Archive {
                 "/workspace",
                 "work",
                 "extensions",
+                "projects",
             ],
             "10001",
             &[],
